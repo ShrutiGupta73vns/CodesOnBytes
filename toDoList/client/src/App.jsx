@@ -1,5 +1,7 @@
 
 import './App.css'
+import Body from './components/Body'
+
 
 function App() {
   
@@ -7,6 +9,8 @@ function App() {
   return (
   
       <div>
+      <Body/>
+ 
         
       </div>
      

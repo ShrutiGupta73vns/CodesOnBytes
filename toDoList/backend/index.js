@@ -11,6 +11,8 @@ app.listen(PORT,()=>{
     console.log(`Server is listening on port ${PORT}`)
 })
 configDB()
+
+//routes
+app.use('/api/v1/todo',todoRoute) //sequence matters here 
 app.use(errorHandler)
 //routes
-app.use('/api/v1/todo',todoRoute)
