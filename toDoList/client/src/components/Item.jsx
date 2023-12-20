@@ -84,20 +84,23 @@ export default function Item({
 
   return (
     <div>
-      <div className="h-40 flex flex-col w-40 border rounded-lg shadow-lg m-10 gap-4 p-3 ">
-        <span>{title}</span>
-        <span>{description}</span>
-        <input
+      
+      <div className="h-40 flex flex-col w-40 border rounded-lg shadow-lg m-4 gap-4 p-4 overflow transition ease-in-out delay-150 bg-blue-100 hover:-translate-y-1 hover:scale-110 hover:bg-purple-300 hover:shadow-2xl duration-300 relative ">
+        <div className=" flex gap-2  ">
+      <input className="  w-5 h-5 accent-violet-500 absolute bottom-3 left-3 m-1"
           type="checkbox"
           checked={isMarked}
           onChange={handleIsChecked}
         />
-        <div className="flex items-center">
+        <span className="font-medium">{title}</span></div>
+        <span className="text-sm   text-slate-500 line-clamp-2">{description}</span>
+        
+        <div className="flex items-center absolute bottom-2  gap-2 right-2 p-1">
           <button onClick={handleClick}>
-            <AiTwotoneDelete className=" h-5 w-6" />
+            <AiTwotoneDelete className=" h-6 w-6" />
           </button>
           <button onClick={() => setisEditing((prev) => !prev)}>
-            <CiEdit className="h-5 w-7" />
+            <CiEdit className="h-6 w-6" />
           </button>
         </div>
       </div>
